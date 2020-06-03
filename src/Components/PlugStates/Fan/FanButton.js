@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './fanLight.css'
+import {Container} from 'react-bootstrap'
 
 
 
@@ -38,10 +39,10 @@ class Fan extends Component {
 
     render(){
         return(
-          <div class="led-box" style = {{width: "10vw", }}>
+          <Container style={{alignText: "center"}}>
             <div class={this.state.buttonColor}></div>
-            <h4>The fan is {this.state.fan}</h4>
-            </div>
+            <p>Fan: {this.state.fan}</p>
+          </Container>
         )
     }
 }

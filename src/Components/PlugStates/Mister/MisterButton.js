@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import {Container} from 'react-bootstrap'
 
 
 
@@ -36,10 +36,10 @@ class Mister extends Component {
 
     render(){
         return(
-          <div class="led-box" style = {{width: "10vw"}}>
+          <Container style={{alignItems:"center", alignText: "center"}}>
             <div class={this.state.buttonColor}></div>
-            <h4>The mister is {this.state.Mister}</h4>
-          </div>
+            <p>Mister: {this.state.Mister}</p>
+          </Container>
         )
     }
 }

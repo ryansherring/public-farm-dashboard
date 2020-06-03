@@ -1,0 +1,18 @@
+.todo{
+    background: lightsteelblue;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    width: 100%;
+}
+
+.add-btn{
+    background: lightblue;
+    border-radius: 40%;
+    align-self: center;
+    margin-bottom: 2%;
+    margin-top: 3%;
+}
+.form {
+    width: 80%;
+    align-self: center;
+}

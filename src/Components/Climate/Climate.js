@@ -231,7 +231,7 @@ class Climate extends React.Component {
               options={this.state.lineChartOptions}
             />
           </Row>
-          <Row style={{height:"40%"}}>
+          <Row style={{height:"40%", marginBottom: '5%'}}>
             <Col>
             <Card style = {{margin: "0", padding: "0", textAlign: "center"}}>
               <Card.Title>Current Indoor Temperature</Card.Title>

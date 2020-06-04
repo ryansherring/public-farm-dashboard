@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/public-farm-dashboard/static/css/main.acf01a45.chunk.css",
+    "main.js": "/public-farm-dashboard/static/js/main.d9767725.chunk.js",
+    "main.js.map": "/public-farm-dashboard/static/js/main.d9767725.chunk.js.map",
+    "runtime-main.js": "/public-farm-dashboard/static/js/runtime-main.116bb0f6.js",
+    "runtime-main.js.map": "/public-farm-dashboard/static/js/runtime-main.116bb0f6.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/public-farm-dashboard/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.16e95944.chunk.js": "/public-farm-dashboard/static/js/2.16e95944.chunk.js",
+    "static/js/2.16e95944.chunk.js.map": "/public-farm-dashboard/static/js/2.16e95944.chunk.js.map",
+    "index.html": "/public-farm-dashboard/index.html",
+    "precache-manifest.7f0fac01f18b3c11313b3ea8cca197d5.js": "/public-farm-dashboard/precache-manifest.7f0fac01f18b3c11313b3ea8cca197d5.js",
+    "service-worker.js": "/public-farm-dashboard/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/public-farm-dashboard/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.acf01a45.chunk.css.map": "/public-farm-dashboard/static/css/main.acf01a45.chunk.css.map",
+    "static/js/2.16e95944.chunk.js.LICENSE.txt": "/public-farm-dashboard/static/js/2.16e95944.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.116bb0f6.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.16e95944.chunk.js",
+    "static/css/main.acf01a45.chunk.css",
+    "static/js/main.d9767725.chunk.js"
+  ]
+}

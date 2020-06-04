@@ -106,7 +106,7 @@ class Climate extends React.Component {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     this.ws = new WebSocket(
-      "ws://192.168.1.113/things/http---192.168.1.100-things-DHTSensor?jwt=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjhjOWVhNjA3LWE1ZWQtNDEyZS1iYmUxLWU2Yjk4OTk3NzM3NyJ9.eyJyb2xlIjoidXNlcl90b2tlbiIsImlhdCI6MTU4OTc0ODIxNywiaXNzIjoiaHR0cHM6Ly9zaGVycmluZ2lzY2FyaW5nLm1vemlsbGEtaW90Lm9yZyJ9.BvpmWFRxZsgQ25BAUcWjqyXE-ZmXOllgZN6xUJ9THewr6ckyo-MEhjgicPfknK8_KoJ1wolSrMIH6Wz1IaC8Xg",
+      "wss://sherringiscaring.mozilla-iot.org/things/http---192.168.1.100-things-DHTSensor?jwt=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjhjOWVhNjA3LWE1ZWQtNDEyZS1iYmUxLWU2Yjk4OTk3NzM3NyJ9.eyJyb2xlIjoidXNlcl90b2tlbiIsImlhdCI6MTU4OTc0ODIxNywiaXNzIjoiaHR0cHM6Ly9zaGVycmluZ2lzY2FyaW5nLm1vemlsbGEtaW90Lm9yZyJ9.BvpmWFRxZsgQ25BAUcWjqyXE-ZmXOllgZN6xUJ9THewr6ckyo-MEhjgicPfknK8_KoJ1wolSrMIH6Wz1IaC8Xg",
       "webthing"
     );
 
@@ -116,7 +116,7 @@ class Climate extends React.Component {
       this.ws.send(JSON.stringify(indoorSubscription));
       let obj;
       fetch(
-        "http://192.168.1.113/things/weather-7122537431f4dc3d166c957717ee2b498815d683/properties",
+        "https://sherringiscaring.mozilla-iot.org/things/weather-7122537431f4dc3d166c957717ee2b498815d683/properties",
         {
           method: "GET",
           headers: {
@@ -155,7 +155,7 @@ class Climate extends React.Component {
         // console.log(value.data);
         var obj;
         fetch(
-          "http://192.168.1.113/things/weather-7122537431f4dc3d166c957717ee2b498815d683/properties",
+          "https://sherringiscaring.mozilla-iot.org/things/weather-7122537431f4dc3d166c957717ee2b498815d683/properties",
           {
             method: "GET",
             headers: {

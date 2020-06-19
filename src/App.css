@@ -7,7 +7,7 @@
   background-color: #282c34;
   max-height: 10%;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   font-size: calc(50% + 2vmin);

@@ -2,7 +2,7 @@ import React from "react";
 import { Pie } from "react-chartjs-2";
 import LineChart from "./chart";
 import ReactSpeedometer from "react-d3-speedometer";
-import { Container, Col, Row, Card } from "react-bootstrap";
+import { Container, Col, Row, Card, CardGroup } from "react-bootstrap";
 import './Climate.css'
 
 class Climate extends React.Component {
@@ -106,7 +106,7 @@ class Climate extends React.Component {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     this.ws = new WebSocket(
-      "wss://sherringiscaring.mozilla-iot.org/things/http---192.168.1.100-things-DHTSensor?jwt=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjhjOWVhNjA3LWE1ZWQtNDEyZS1iYmUxLWU2Yjk4OTk3NzM3NyJ9.eyJyb2xlIjoidXNlcl90b2tlbiIsImlhdCI6MTU4OTc0ODIxNywiaXNzIjoiaHR0cHM6Ly9zaGVycmluZ2lzY2FyaW5nLm1vemlsbGEtaW90Lm9yZyJ9.BvpmWFRxZsgQ25BAUcWjqyXE-ZmXOllgZN6xUJ9THewr6ckyo-MEhjgicPfknK8_KoJ1wolSrMIH6Wz1IaC8Xg",
+      "wss://sherringiscaring.mozilla-iot.org/things/http---192.168.1.111-things-DHTSensor?jwt=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjRhMTJiNWY5LWVlNTAtNGFkMi1hNzNlLTg5ODVjODRhNTU3ZiJ9.eyJyb2xlIjoidXNlcl90b2tlbiIsImlhdCI6MTU5MTczNDAzMCwiaXNzIjoiaHR0cHM6Ly9zaGVycmluZ2lzY2FyaW5nLm1vemlsbGEtaW90Lm9yZyJ9.UGVluprHnYwU1IW8HGHi5KzIdAy0tPm6BwIaCFJmcuWfP2bO7LUpYmuDZzLTKaepW8ZO5N80EiIzzTfeqB7Xsg",
       "webthing"
     );
 
@@ -223,17 +223,16 @@ class Climate extends React.Component {
 
   render() {
     return (
-      <Container style={{height: "50vh"}} className={'something'}>
-          <Row style={{height:"70%"}}>
+      <Container className={'something'}>
+          <Row style={{height:"40vh"}}>
             <LineChart
               className="line chart"
               data={this.state.lineChartData}
               options={this.state.lineChartOptions}
             />
           </Row>
-          <Row style={{height:"40%", marginBottom: '5%'}}>
-            <Col>
-            <Card style = {{margin: "0", padding: "0", textAlign: "center"}}>
+          <CardGroup>
+            <Card style = {{fontSize: "calc(50% + 2vmin)"}}>
               <Card.Title>Current Indoor Temperature</Card.Title>
               <Card.Body style={{margin: "0", padding: "0", textAlign: "center"}}>
               <ReactSpeedometer
@@ -250,10 +249,8 @@ class Climate extends React.Component {
                 width={175}
               />
               </Card.Body>
-              </Card>
-            </Col>
-            <Col>
-            <Card style = {{margin: "0", padding: "0", textAlign: "center"}}>
+            </Card>
+            <Card style = {{fontSize: "calc(50% + 2vmin)"}}>
               <Card.Title>Current Indoor Humidity</Card.Title>
               <Card.Body style={{margin: "0", padding: "0", textAlign: "center"}}>
               <ReactSpeedometer
@@ -270,33 +267,22 @@ class Climate extends React.Component {
                 width={175}
               />
               </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-          <Row style={{height: "40%"}}>
-            <Container>
-              <Row style={{height: "2%", marginTop: "2%"}}>
-                <Col style={{height: "100%"}}>
-                  <Card>
-                    Cloud Cover: {this.state.cloudCover}%
-                    <Pie 
-                    // height={100}
-                    // width={100}
-                    // maintainAspectRatio={false}
-                    data={this.state.pieData}
-                    />
-                  </Card>
-                </Col>
-                <Col style={{height: "100%"}}>
-                <Card className={"box4"}>
-                 <br />weather images being changed at the moment
-                 <br />wind speed: {this.state.windSpeed} mph
-                 <br />weather: {this.state.weather}
-                </Card>
-                </Col>
-              </Row>
-            </Container>
-          </Row>
+            </Card>
+            <Card style = {{ fontSize: "calc(50% + 2vmin)" }}>
+              Cloud Cover: {this.state.cloudCover}%
+              <Pie 
+              // height={100}
+              // width={100}
+              // maintainAspectRatio={false}
+              data={this.state.pieData}
+              />
+            </Card>
+            <Card className={"box4"} style = {{ fontSize: "calc(50% + 1vmin)" }}>
+             <br />weather images being changed at the moment
+             <br />wind speed: {this.state.windSpeed} mph
+             <br />weather: {this.state.weather}
+            </Card>
+          </CardGroup>
       </Container>
     );
   }

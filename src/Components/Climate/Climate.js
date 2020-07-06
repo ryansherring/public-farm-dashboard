@@ -116,7 +116,7 @@ class Climate extends React.Component {
       this.ws.send(JSON.stringify(indoorSubscription));
       let obj;
       fetch(
-        "https://sherringiscaring.mozilla-iot.org/things/weather-7122537431f4dc3d166c957717ee2b498815d683/properties",
+        "https://sherringiscaring.mozilla-iot.org/things/http---192.168.1.100-things-DHTSensor/properties",
         {
           method: "GET",
           headers: {

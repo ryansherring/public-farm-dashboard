@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/public-farm-dashboard/static/css/main.17b4c77c.chunk.css",
-    "main.js": "/public-farm-dashboard/static/js/main.897d6d2f.chunk.js",
-    "main.js.map": "/public-farm-dashboard/static/js/main.897d6d2f.chunk.js.map",
+    "main.css": "/public-farm-dashboard/static/css/main.ed9e819b.chunk.css",
+    "main.js": "/public-farm-dashboard/static/js/main.ab79d707.chunk.js",
+    "main.js.map": "/public-farm-dashboard/static/js/main.ab79d707.chunk.js.map",
     "runtime-main.js": "/public-farm-dashboard/static/js/runtime-main.116bb0f6.js",
     "runtime-main.js.map": "/public-farm-dashboard/static/js/runtime-main.116bb0f6.js.map",
     "static/css/2.af3c1da9.chunk.css": "/public-farm-dashboard/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.50bf1c75.chunk.js": "/public-farm-dashboard/static/js/2.50bf1c75.chunk.js",
-    "static/js/2.50bf1c75.chunk.js.map": "/public-farm-dashboard/static/js/2.50bf1c75.chunk.js.map",
+    "static/js/2.2c44a23c.chunk.js": "/public-farm-dashboard/static/js/2.2c44a23c.chunk.js",
+    "static/js/2.2c44a23c.chunk.js.map": "/public-farm-dashboard/static/js/2.2c44a23c.chunk.js.map",
     "index.html": "/public-farm-dashboard/index.html",
-    "precache-manifest.2300b8ea917339e0e94f8eacf00546c1.js": "/public-farm-dashboard/precache-manifest.2300b8ea917339e0e94f8eacf00546c1.js",
+    "precache-manifest.dc8a00f7167cb1a736917a44628262f5.js": "/public-farm-dashboard/precache-manifest.dc8a00f7167cb1a736917a44628262f5.js",
     "service-worker.js": "/public-farm-dashboard/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/public-farm-dashboard/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.17b4c77c.chunk.css.map": "/public-farm-dashboard/static/css/main.17b4c77c.chunk.css.map",
-    "static/js/2.50bf1c75.chunk.js.LICENSE.txt": "/public-farm-dashboard/static/js/2.50bf1c75.chunk.js.LICENSE.txt"
+    "static/css/main.ed9e819b.chunk.css.map": "/public-farm-dashboard/static/css/main.ed9e819b.chunk.css.map",
+    "static/js/2.2c44a23c.chunk.js.LICENSE.txt": "/public-farm-dashboard/static/js/2.2c44a23c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.116bb0f6.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.50bf1c75.chunk.js",
-    "static/css/main.17b4c77c.chunk.css",
-    "static/js/main.897d6d2f.chunk.js"
+    "static/js/2.2c44a23c.chunk.js",
+    "static/css/main.ed9e819b.chunk.css",
+    "static/js/main.ab79d707.chunk.js"
   ]
 }

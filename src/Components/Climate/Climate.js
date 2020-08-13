@@ -62,6 +62,7 @@ class Climate extends React.Component {
           {
             ticks: {
               autoSkip: true,
+              maxTicksLimit: 5,
               beginAtZero: true,
               gridLines: {
                 display: false,
@@ -185,7 +186,7 @@ class Climate extends React.Component {
           oldTemp2DataSet.data.push(obj.temperature);
           PieDataSet1.data.splice(0, 1, obj.cloudCover);
           PieDataSet1.data.splice(1, 1, 100 - obj.cloudCover);
-          console.log(this.state.weatherImg)
+          // console.log(this.state.weatherImg)
         }
 
         const newTemp2DataSet = { ...oldTemp2DataSet };

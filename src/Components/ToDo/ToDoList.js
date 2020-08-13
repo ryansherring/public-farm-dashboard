@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./todo.css";
 import { Card } from "react-bootstrap";
+import "./todo.css"
 
 class ToDoList extends Component {
   state = {
@@ -42,7 +43,7 @@ class ToDoList extends Component {
 
   render() {
     return (
-      <Card className="todo">
+      <Card className="todo" style={{width: "100%"}}>
         <Card.Title className="todo-title">Farm To-Do-List</Card.Title>
         <Card.Body>
           {this.state.list.length < 1 ? (

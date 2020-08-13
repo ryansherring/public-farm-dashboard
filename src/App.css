@@ -4,17 +4,17 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   max-height: 10%;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   font-size: calc(50% + 2vmin);
   color: white;
-  /* width: 100vw; */
 }
-
+canvas {
+  height: 100%;
+}
 /* .App-link {
   color: #61dafb;
 } */
@@ -31,3 +31,6 @@
   width: 10vw;
   padding: 0;
 } */
+Card {
+  background-color: white;
+}

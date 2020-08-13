@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import './fanLight.css'
 import {Container} from 'react-bootstrap'
 
-
-
-
 class Fan extends Component {
   state = { fan: "", buttonColor: '' };
   componentDidMount() {
@@ -41,6 +38,7 @@ class Fan extends Component {
         return(
           <Container style={{alignText: "center"}}>
             <div class={this.state.buttonColor}></div>
+            <br/>
             <p>Fan: {this.state.fan}</p>
           </Container>
         )

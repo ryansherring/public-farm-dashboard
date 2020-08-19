@@ -43,7 +43,7 @@ function App() {
           <Row style={{ width: "80%", marginLeft: "10%" }}>
             <ToDoList />
           </Row>
-          <Row style={{ height: "5%", width: "60%", marginLeft: "20%", marginTop: "3%" }}>
+          <Row style={{ height: "4%", width: "60%", marginLeft: "20%"}}>
             <Col>
               <Fan />
             </Col>

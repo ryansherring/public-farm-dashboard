@@ -11,7 +11,7 @@
 #nav{
     /* position: "fixed"; */
           z-index: 10;
-          width: 45%;
+          /* width: 45%; */
 }
 
 .notBottom{
@@ -20,7 +20,7 @@
 }
 
 .bottom {
-    position: absolute;
+    /* position: absolute; */
     z-index: 1;
 }
 .hide {

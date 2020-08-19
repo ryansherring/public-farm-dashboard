@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Climate from "./Components/Climate/Climate";
 import Fan from "./Components/PlugStates/Fan/FanButton";
 import Mister from "./Components/PlugStates/Mister/MisterButton";
@@ -10,32 +10,40 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App() {
-  var scrollHeight;
-  var clientHeight;
-  var measurement;
-  const measureScreenSize = () => {
-    scrollHeight = document.documentElement.scrollHeight;
-    clientHeight = document.documentElement.clientHeight;
-    measurement = scrollHeight - clientHeight;
-    console.log("scrollHeight: " + scrollHeight)
-    console.log("clientHeight: " + clientHeight)
-    console.log("measurement: " + measurement)
+  var ch = window.innerHeight
+  var sh = document.documentElement.scrollHeight
+  console.log(sh)
+  console.log(ch)
+  const [scrollHeight, setScrollHeight] = useState(sh)
+  const [clientHeight, setClientHeight] = useState(ch)
+
+  const handleResize = () => {
+    setScrollHeight(document.documentElement.scrollHeight)
+    setClientHeight(window.innerHeight)
+    console.log('scroll height = '+ scrollHeight)
+    console.log('client height = '+ clientHeight)
   }
-  measureScreenSize()
+  
+  useEffect(function(){
+    window.addEventListener('resize', handleResize())
+    return () => {
+      window.removeEventListener('resize', handleResize())
+    }
+ }, []);
+
   return (
-    <Container fluid style={{ position: "absolute", zIndex: "1" }}>
+    <Container fluid style={{ height: '100vh', position: "absolute", zIndex: "1" }}>
       <Row>
         <Climate />
       </Row>
-      {measureScreenSize}
-      {clientHeight < scrollHeight ? (
+      {sh > ch ? (
         <Sidebar />
       ) : (
         <>
-          <Row style={{ height: "80%", width: "80%", marginLeft: "10%" }}>
-            <ToDoList style={{ height: "80%" }} />
+          <Row style={{ width: "80%", marginLeft: "10%" }}>
+            <ToDoList />
           </Row>
-          <Row style={{ width: "60%", marginLeft: "20%" }}>
+          <Row style={{ height: "5%", width: "60%", marginLeft: "20%", marginTop: "3%" }}>
             <Col>
               <Fan />
             </Col>

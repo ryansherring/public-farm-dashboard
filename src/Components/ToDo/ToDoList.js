@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./todo.css";
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import "./todo.css"
 
 class ToDoList extends Component {
@@ -44,8 +44,8 @@ class ToDoList extends Component {
   render() {
     return (
       <Card className="todo" style={{width: "100%"}}>
-        <Card.Title className="todo-title">Farm To-Do-List</Card.Title>
-        <Card.Body>
+        <Card.Title>Farm To-Do-List</Card.Title>
+        <Card.Body style={{padding: "0"}}>
           {this.state.list.length < 1 ? (
             <>
               <p>Everything is currently taken care of!
@@ -69,22 +69,19 @@ class ToDoList extends Component {
               })}
             </ul>
           )}
-        </Card.Body>
-
-        <br />
-        <p>Or Add a Custom Item...</p>
         <input
           className="form"
           type="text"
-          placeholder="type new item here"
+          placeholder="custom to-do item"
           value={this.state.newItem}
           onChange={(e) => this.updateInput("newItem", e.target.value)}
         />
-        <br />
-        <button className="add-btn btn-floating" onClick={() => this.addItem()}>
+        <button className="add-btn" style={{height: '25%'}} onClick={() => this.addItem()}>
           <i>Add</i>
         </button>
         <br />
+        </Card.Body>
+        
       </Card>
     );
   }

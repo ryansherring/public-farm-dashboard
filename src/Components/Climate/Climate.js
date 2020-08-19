@@ -225,17 +225,17 @@ class Climate extends React.Component {
   render() {
     return (
       <Container className={'something'} style={{position: 'relative', zIndex: '1'}}>
-          <Row style={{height:"40vh", zIndex: "1"}}>
+          <Row style={{height: '38vh', zIndex: "1"}}>
             <LineChart
               className="line chart"
               data={this.state.lineChartData}
               options={this.state.lineChartOptions}
             />
           </Row>
-          <CardGroup>
-            <Card style = {{fontSize: "calc(50% + 2vmin)"}}>
+          <CardGroup style={{}}>
+            <Card style = {{ fontSize: "calc(50% + 2vmin)"}}>
               <Card.Title>Current Indoor Temperature</Card.Title>
-              <Card.Body style={{margin: "0", padding: "0", textAlign: "center"}}>
+              <Card.Body style={{ padding: "0", textAlign: "center"}}>
               <ReactSpeedometer
                 forceRender = {true}
                 fluidWidth={false}
@@ -251,9 +251,9 @@ class Climate extends React.Component {
               />
               </Card.Body>
             </Card>
-            <Card style = {{fontSize: "calc(50% + 2vmin)"}}>
+            <Card style = {{ fontSize: "calc(50% + 2vmin)"}}>
               <Card.Title>Current Indoor Humidity</Card.Title>
-              <Card.Body style={{margin: "0", padding: "0", textAlign: "center"}}>
+              <Card.Body style={{ padding: "0", textAlign: "center"}}>
               <ReactSpeedometer
                 forceRender = {true}
                 fluidWidth={false}
@@ -278,7 +278,7 @@ class Climate extends React.Component {
               data={this.state.pieData}
               />
             </Card>
-            <Card className={"box4"} style = {{ fontSize: "calc(50% + 1vmin)" }}>
+            <Card className={"box4"} style = {{  fontSize: "calc(50% + 1vmin)" }}>
              <br />weather images being changed at the moment
              <br />wind speed: {this.state.windSpeed} mph
              <br />weather: {this.state.weather}

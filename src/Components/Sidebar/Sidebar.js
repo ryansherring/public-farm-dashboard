@@ -55,7 +55,7 @@ function Sidebar() {
         <Row>
           <ToDoList />
         </Row>
-        <Row>
+        <Row style={{backgroundColor: "white"}}>
           <Col>
             <Fan />
           </Col>

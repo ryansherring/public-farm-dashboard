@@ -225,7 +225,7 @@ class Climate extends React.Component {
   render() {
     return (
       <Container className={'something'} style={{position: 'relative', zIndex: '1'}}>
-          <Row style={{height: '38vh', zIndex: "1"}}>
+          <Row style={{height: '36vh', zIndex: "1"}}>
             <LineChart
               className="line chart"
               data={this.state.lineChartData}

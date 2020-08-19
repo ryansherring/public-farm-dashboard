@@ -36,7 +36,8 @@ class WaterPump extends Component {
           return(
             <Container style={{alignItems:"center", alignText: "center"}}>
               <div class={this.state.buttonColor}></div>
-              <div><p>WaterPump: {this.state.WaterPump}</p></div>
+              <br />
+              <p>WaterPump: {this.state.WaterPump}</p>
             </Container>
           )
       }

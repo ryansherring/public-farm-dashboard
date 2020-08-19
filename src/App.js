@@ -2,54 +2,52 @@ import React from "react";
 import Climate from "./Components/Climate/Climate";
 import Fan from "./Components/PlugStates/Fan/FanButton";
 import Mister from "./Components/PlugStates/Mister/MisterButton";
+import WaterPump from "./Components/PlugStates/WaterPump/WaterPumpButton";
 import "./App.css";
 import ToDoList from "./Components/ToDo/ToDoList";
 import { Container, Row, Col, Card, Jumbotron } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Sidebar from './Components/Sidebar/Sidebar'
-
+import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App() {
+  var scrollHeight;
+  var clientHeight;
+  var measurement;
+  const measureScreenSize = () => {
+    scrollHeight = document.documentElement.scrollHeight;
+    clientHeight = document.documentElement.clientHeight;
+    measurement = scrollHeight - clientHeight;
+    console.log("scrollHeight: " + scrollHeight)
+    console.log("clientHeight: " + clientHeight)
+    console.log("measurement: " + measurement)
+  }
+  measureScreenSize()
   return (
-    <Container fluid>
-      
-      {/* <Jumbotron className="App-header" style={{backgroundColor:"black", height: "2vh", margin: "0", color: "white", alignItems: "center", justifyContent: "center"}}>
-        My cool app. Check back later for more sensors
-      </Jumbotron> */}
-      
-      <Container fluid style={{position: "relative", zIndex: "10"}}>
-      <Sidebar style={{ position: "sticky", zIndex: "10", transform: "translateZ(10)" }}/>
+    <Container fluid style={{ position: "absolute", zIndex: "1" }}>
       <Row>
-        {/* <Col sm={1} md={2} lg={9} className="col-1"> */}
-        
-          <Climate/>
-        {/* </Col> */}
-        {/* <Col sm={1} md={2} lg={2} className="col-2"> */}
-          {/* <Row style={{ height: "75vh" }}> */}
-            {/* <ToDoList  /> */}
-          {/* </Row> */}
-          {/* <Row style={{ height: "10vh", marginTop: "5vh" }}> */}
-            {/* <Card
-              style={{
-                // height: "100%",
-                width: "100%",
-                // padding: "0",
-                // margin: "0",
-              }}
-            >
-              <Row>
-                <Col>
-                  <Fan />
-                </Col>
-                <Col>
-                  <Mister />
-                </Col>
-              </Row>
-            </Card> */}
-          {/* </Row> */}
-        {/* </Col> */}
-        </Row>
-    </Container>
+        <Climate />
+      </Row>
+      {measureScreenSize}
+      {clientHeight < scrollHeight ? (
+        <Sidebar />
+      ) : (
+        <>
+          <Row style={{ height: "80%", width: "80%", marginLeft: "10%" }}>
+            <ToDoList style={{ height: "80%" }} />
+          </Row>
+          <Row style={{ width: "60%", marginLeft: "20%" }}>
+            <Col>
+              <Fan />
+            </Col>
+            <Col>
+              <Mister />
+            </Col>
+            <Col>
+              <WaterPump />
+            </Col>
+          </Row>
+        </>
+      )}
     </Container>
   );
 }

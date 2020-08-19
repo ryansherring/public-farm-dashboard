@@ -4,7 +4,7 @@ import {Container} from 'react-bootstrap'
 
 
 class Mister extends Component {
-  state = { Mister: "", buttonColor: "" };
+  state = { Mister: "off", buttonColor: "led-red" };
   componentDidMount() {
     const MisterSubscription = {
       "messageType": "propertyStatus",
@@ -38,6 +38,7 @@ class Mister extends Component {
         return(
           <Container style={{alignItems:"center", alignText: "center"}}>
             <div class={this.state.buttonColor}></div>
+            <br />
             <p>Mister: {this.state.Mister}</p>
           </Container>
         )

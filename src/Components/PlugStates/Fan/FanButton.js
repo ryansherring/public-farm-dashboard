@@ -3,7 +3,7 @@ import './fanLight.css'
 import {Container} from 'react-bootstrap'
 
 class Fan extends Component {
-  state = { fan: "", buttonColor: '' };
+  state = { fan: "off", buttonColor: 'led-red' };
   componentDidMount() {
     const fanSubscription = {
       "messageType": "propertyStatus",

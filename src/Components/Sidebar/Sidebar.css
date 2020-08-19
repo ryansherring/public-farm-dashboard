@@ -1,3 +1,28 @@
 .navbar navbar-expand-auto navbar-light bg-light {
     width: 5vw;
 }
+
+/* .scrolled {
+    position: fixed;
+    background-color: red;
+} */
+
+
+#nav{
+    /* position: "fixed"; */
+          z-index: 10;
+          width: 45%;
+}
+
+.notBottom{
+    position: fixed;
+    z-index: 10;
+}
+
+.bottom {
+    position: absolute;
+    z-index: 1;
+}
+.hide {
+    display: none;
+}

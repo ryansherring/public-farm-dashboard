@@ -48,8 +48,8 @@ class ToDoList extends Component {
         <Card.Body>
           {this.state.list.length < 1 ? (
             <>
-              <p>Everything is currently taken care of!</p>
-              <p>
+              <p>Everything is currently taken care of!
+                <br />
                 As parts of the farm need attention, such as water level going
                 too high, eratic sensor values, or weekly maintenance items, the
                 list will automatically populate

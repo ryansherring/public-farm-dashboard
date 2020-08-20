@@ -6,7 +6,7 @@ import Fan from "../PlugStates/Fan/FanButton";
 import WaterPump from "../PlugStates/WaterPump/WaterPumpButton";
 import "./Sidebar.css";
 
-function Sidebar() {
+const Sidebar = () => {
   // var and function to get percentage of screen scrolled
   var result = 0;
   var scrollPercent = () => {
@@ -24,11 +24,6 @@ function Sidebar() {
     scrollPercent();
     const nav = document.getElementById("nav");
     const button = document.querySelector(".navbar-toggler");
-    // if (result > 10) {
-    //   nav.classList.add('scrolled')
-    // } else {
-    //   nav.classList.remove('scrolled')
-    // }
     if (result > 95) {
       nav.classList.remove("notBottom");
       nav.classList.add("bottom");
@@ -49,8 +44,10 @@ function Sidebar() {
     <Navbar id="nav" fixed="bottom" bg="none" expand={expand}>
       <Navbar.Toggle
         aria-controls="basic-navbar-nav"
-        style={{ backgroundColor: "lightblue", borderRadius: "100%" }}
-      />
+        style={{ backgroundColor: "lightblue", borderRadius: "30%" }}
+      >
+        <div className="todo_count">2</div>
+      </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
         <Row>
           <ToDoList />

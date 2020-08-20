@@ -48,6 +48,22 @@ class Climate extends React.Component {
           spanGaps: true,
           showPoint: false,
         },
+        {
+          id: 2,
+          type: "line",
+          label: "Water Temperature",
+          backgroundColor: "rgba(0, 0, 0, 0)",
+          pointBorderColor: "rgba(135,206,50,0)",
+          pointHoverBorderColor: "rgba(235,06,250,1)",
+          borderColor: "rgba(100,200,100, 1)",
+          fill: true,
+          borderWidth: "2",
+          lineTension: 1,
+          data: [],
+          showLine: true,
+          spanGaps: true,
+          showPoint: false,
+        },
       ],
     },
     lineChartOptions: {
@@ -225,7 +241,7 @@ class Climate extends React.Component {
   render() {
     return (
       <Container className={'something'} style={{position: 'relative', zIndex: '1'}}>
-          <Row style={{height: '36vh', zIndex: "1"}}>
+          <Row style={{ height: '36vh', zIndex: "1" }}>
             <LineChart
               className="line chart"
               data={this.state.lineChartData}

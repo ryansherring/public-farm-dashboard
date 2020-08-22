@@ -6,16 +6,21 @@ import { Card } from 'react-bootstrap'
 const ToDoList = () => {
   const [notes, setNotes] = useState([]);
   const [input, setInput] = useState("");
+  const [noteLength, setNoteLength] = useState(notes.length + 1)
 
   const handleSubmit = (e, notes, setNotes, input, setInput) => {
     e.preventDefault();
     const id = notes.length ? notes[notes.length - 1].id + 1 : 0;
     setNotes([...notes, { id, message: input }]);
     setInput("");
+    setNoteLength(noteLength + 1)
+    console.log(noteLength)
   };
 
   const deleteNote = (id, notes, setNotes) => {
     setNotes(notes.filter((note) => note.id != id));
+    setNoteLength(noteLength - 1)
+    console.log(noteLength)
   };
 
   return (
@@ -33,12 +38,13 @@ const ToDoList = () => {
               />
             ))}
             <form
+              style={{padding: "0"}}
               onSubmit={(e) =>
                 handleSubmit(e, notes, setNotes, input, setInput)
               }
             >
-              <input onChange={(e) => setInput(e.target.value)} value={input} />
-              <button>add</button>
+              <input placeholder="or add a custom item..." onChange={(e) => setInput(e.target.value)} value={input} />
+              {/* <button>add</button> */}
             </form>
             </Card.Body>
         
@@ -56,12 +62,13 @@ const ToDoList = () => {
                 list will automatically populate
               </p>
             <form
+              style={{padding: "0"}}
               onSubmit={(e) =>
                 handleSubmit(e, notes, setNotes, input, setInput)
               }
             >
-              <input onChange={(e) => setInput(e.target.value)} value={input} />
-              <button>add</button>
+              <input placeholder="or add a custom item..." onChange={(e) => setInput(e.target.value)} value={input} />
+              {/* <button>add</button> */}
             </form>
             </Card.Body>
         

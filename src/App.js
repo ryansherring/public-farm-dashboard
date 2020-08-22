@@ -9,9 +9,7 @@ import { Container, Row, Col, Card, Jumbotron } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sidebar from "./Components/Sidebar/Sidebar";
 
-const App = props => {
-
-  const [listLength, setListLength] = useState(0)
+const App = () => {
 
   var ch = window.innerHeight
   var sh = document.documentElement.scrollHeight

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Navbar, Container, Card, Row, Col } from "react-bootstrap";
 import ToDoList from "../ToDo/ToDoList";
 import Mister from "../PlugStates/Mister/MisterButton";
@@ -6,7 +6,8 @@ import Fan from "../PlugStates/Fan/FanButton";
 import WaterPump from "../PlugStates/WaterPump/WaterPumpButton";
 import "./Sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = (noteLength) => {
+
   // var and function to get percentage of screen scrolled
   var result = 0;
   var scrollPercent = () => {
@@ -46,7 +47,7 @@ const Sidebar = () => {
         aria-controls="basic-navbar-nav"
         style={{ backgroundColor: "lightblue", borderRadius: "30%" }}
       >
-        <div className="todo_count">2</div>
+        
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
         <Row>

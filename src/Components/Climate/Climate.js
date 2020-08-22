@@ -53,9 +53,9 @@ class Climate extends React.Component {
           type: "line",
           label: "Water Temperature",
           backgroundColor: "rgba(0, 0, 0, 0)",
-          pointBorderColor: "rgba(135,206,50,0)",
+          pointBorderColor: "rgba(128,0,128,0)",
           pointHoverBorderColor: "rgba(235,06,250,1)",
-          borderColor: "rgba(100,200,100, 1)",
+          borderColor: "rgba(128,0,128,1)",
           fill: true,
           borderWidth: "2",
           lineTension: 1,
@@ -216,7 +216,7 @@ class Climate extends React.Component {
           datasets: [newTempDataSet, newTemp2DataSet],
 
           labels: this.state.lineChartData.labels.concat(
-            new Date().toLocaleTimeString()
+            new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
           ),
         };
         const newPieChartData = {

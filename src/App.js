@@ -5,7 +5,7 @@ import Mister from "./Components/PlugStates/Mister/MisterButton";
 import WaterPump from "./Components/PlugStates/WaterPump/WaterPumpButton";
 import "./App.css";
 import ToDoList from "./Components/ToDo/ToDoList";
-import { Container, Row, Col, Card, Jumbotron } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sidebar from "./Components/Sidebar/Sidebar";
 
@@ -13,16 +13,12 @@ const App = () => {
 
   var ch = window.innerHeight
   var sh = document.documentElement.scrollHeight
-  console.log(sh)
-  console.log(ch)
   const [scrollHeight, setScrollHeight] = useState(sh)
   const [clientHeight, setClientHeight] = useState(ch)
 
   const handleResize = () => {
     setScrollHeight(document.documentElement.scrollHeight)
     setClientHeight(window.innerHeight)
-    console.log('scroll height = '+ scrollHeight)
-    console.log('client height = '+ clientHeight)
   }
   
   useEffect(function(){
@@ -33,18 +29,24 @@ const App = () => {
  }, []);
 
   return (
-    <Container fluid style={{ height: '100vh', position: "absolute", zIndex: "1" }}>
-      <Row>
-        <Climate />
-      </Row>
+      <>
       {sh > ch ? (
+        <Container fluid style={{ height: `${sh}`, position: "absolute", zIndex: "1" }} className="app-container" >
+        <Row>
+          <Climate />
+        </Row>
         <Sidebar />
+        </Container>
       ) : (
         <>
+        <Container fluid style={{ height: '100vh', position: "absolute", zIndex: "1" }} className="app-container" >
+        <Row>
+          <Climate />
+        </Row>
           <Row style={{ width: "80%", marginLeft: "10%" }}>
             <ToDoList />
           </Row>
-          <Row style={{ height: "4%", width: "60%", marginLeft: "20%"}}>
+          <Row style={{ height: "8%", width: "54%", marginLeft: "23%", marginTop: '2%', backgroundColor: "rgba(255, 255, 255, 0.6)"}}>
             <Col>
               <Fan />
             </Col>
@@ -55,9 +57,10 @@ const App = () => {
               <WaterPump />
             </Col>
           </Row>
+          </Container>
         </>
-      )}
-    </Container>
+      )}</>
+    
   );
 }
 

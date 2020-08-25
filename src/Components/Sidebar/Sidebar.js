@@ -45,15 +45,15 @@ const Sidebar = (noteLength) => {
     <Navbar id="nav" fixed="bottom" bg="none" expand={expand}>
       <Navbar.Toggle
         aria-controls="basic-navbar-nav"
-        style={{ backgroundColor: "lightblue", borderRadius: "30%" }}
-      >
+        style={{ backgroundColor: "lightblue", borderRadius: "10%", marginBottom: "3%", marginLeft: "3%" }}
+      > view <br /> automation
         
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
         <Row>
           <ToDoList />
         </Row>
-        <Row style={{backgroundColor: "white"}}>
+        <Row style={{backgroundColor: "rgba(255,255,255,0.9)", width: "70%", marginLeft: "15%"}}>
           <Col>
             <Fan />
           </Col>

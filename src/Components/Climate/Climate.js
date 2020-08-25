@@ -2,7 +2,7 @@ import React from "react";
 import { Pie } from "react-chartjs-2";
 import LineChart from "./chart";
 import ReactSpeedometer from "react-d3-speedometer";
-import { Container, Col, Row, Card, CardGroup } from "react-bootstrap";
+import { Container, Row, Card, CardGroup } from "react-bootstrap";
 import './Climate.css'
 
 class Climate extends React.Component {
@@ -241,17 +241,17 @@ class Climate extends React.Component {
   render() {
     return (
       <Container className={'something'} style={{position: 'relative', zIndex: '1'}}>
-          <Row style={{ height: '36vh', zIndex: "1" }}>
+          <Row style={{ height: '36vh', zIndex: "1", backgroundColor: 'rgba(255,255,255, 0.5)',  }}>
             <LineChart
               className="line chart"
               data={this.state.lineChartData}
               options={this.state.lineChartOptions}
             />
           </Row>
-          <CardGroup style={{}}>
-            <Card style = {{ fontSize: "calc(50% + 2vmin)"}}>
+          <CardGroup style={{marginTop: "2%"}}>
+            <Card style = {{ fontSize: "calc(50% + 2vmin)", backgroundColor: 'rgba(255,255,255, 0.4)'}}>
               <Card.Title>Current Indoor Temperature</Card.Title>
-              <Card.Body style={{ padding: "0", textAlign: "center"}}>
+              <Card.Body style={{ padding: "0", textAlign: "center", }}>
               <ReactSpeedometer
                 forceRender = {true}
                 fluidWidth={false}
@@ -267,7 +267,7 @@ class Climate extends React.Component {
               />
               </Card.Body>
             </Card>
-            <Card style = {{ fontSize: "calc(50% + 2vmin)"}}>
+            <Card style = {{ fontSize: "calc(50% + 2vmin)", backgroundColor: 'rgba(255,255,255, 0.4)'}}>
               <Card.Title>Current Indoor Humidity</Card.Title>
               <Card.Body style={{ padding: "0", textAlign: "center"}}>
               <ReactSpeedometer
@@ -285,16 +285,17 @@ class Climate extends React.Component {
               />
               </Card.Body>
             </Card>
-            <Card style = {{ fontSize: "calc(50% + 2vmin)" }}>
+            <Card style = {{ fontSize: "calc(50% + 2vmin)", backgroundColor: 'rgba(255,255,255, 0.4)' }}>
               Cloud Cover: {this.state.cloudCover}%
               <Pie 
               // height={100}
               // width={100}
               // maintainAspectRatio={false}
               data={this.state.pieData}
+              style ={{ backgroundColor: 'rgba(255,255,255, 0.4)'}}
               />
             </Card>
-            <Card className={"box4"} style = {{  fontSize: "calc(50% + 1vmin)" }}>
+            <Card className={"box4"} style = {{  fontSize: "calc(50% + 1vmin)", backgroundColor: 'rgba(255,255,255, 0.4)' }}>
              <br />weather images being changed at the moment
              <br />wind speed: {this.state.windSpeed} mph
              <br />weather: {this.state.weather}

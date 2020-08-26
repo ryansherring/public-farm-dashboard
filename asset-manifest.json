@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/public-farm-dashboard/static/css/main.e26d1de1.chunk.css",
-    "main.js": "/public-farm-dashboard/static/js/main.de11c3fb.chunk.js",
-    "main.js.map": "/public-farm-dashboard/static/js/main.de11c3fb.chunk.js.map",
+    "main.css": "/public-farm-dashboard/static/css/main.e6ad7414.chunk.css",
+    "main.js": "/public-farm-dashboard/static/js/main.64b54517.chunk.js",
+    "main.js.map": "/public-farm-dashboard/static/js/main.64b54517.chunk.js.map",
     "runtime-main.js": "/public-farm-dashboard/static/js/runtime-main.116bb0f6.js",
     "runtime-main.js.map": "/public-farm-dashboard/static/js/runtime-main.116bb0f6.js.map",
-    "static/css/2.af3c1da9.chunk.css": "/public-farm-dashboard/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.a0f390a5.chunk.js": "/public-farm-dashboard/static/js/2.a0f390a5.chunk.js",
-    "static/js/2.a0f390a5.chunk.js.map": "/public-farm-dashboard/static/js/2.a0f390a5.chunk.js.map",
+    "static/css/2.0c8fc136.chunk.css": "/public-farm-dashboard/static/css/2.0c8fc136.chunk.css",
+    "static/js/2.2e227837.chunk.js": "/public-farm-dashboard/static/js/2.2e227837.chunk.js",
+    "static/js/2.2e227837.chunk.js.map": "/public-farm-dashboard/static/js/2.2e227837.chunk.js.map",
     "index.html": "/public-farm-dashboard/index.html",
-    "precache-manifest.8ae2f04339e8973ee8d3637a608f5e0f.js": "/public-farm-dashboard/precache-manifest.8ae2f04339e8973ee8d3637a608f5e0f.js",
+    "precache-manifest.797210d7d581e0981f40629d652bb3b5.js": "/public-farm-dashboard/precache-manifest.797210d7d581e0981f40629d652bb3b5.js",
     "service-worker.js": "/public-farm-dashboard/service-worker.js",
-    "static/css/2.af3c1da9.chunk.css.map": "/public-farm-dashboard/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.e26d1de1.chunk.css.map": "/public-farm-dashboard/static/css/main.e26d1de1.chunk.css.map",
-    "static/js/2.a0f390a5.chunk.js.LICENSE.txt": "/public-farm-dashboard/static/js/2.a0f390a5.chunk.js.LICENSE.txt"
+    "static/css/2.0c8fc136.chunk.css.map": "/public-farm-dashboard/static/css/2.0c8fc136.chunk.css.map",
+    "static/css/main.e6ad7414.chunk.css.map": "/public-farm-dashboard/static/css/main.e6ad7414.chunk.css.map",
+    "static/js/2.2e227837.chunk.js.LICENSE.txt": "/public-farm-dashboard/static/js/2.2e227837.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.116bb0f6.js",
-    "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.a0f390a5.chunk.js",
-    "static/css/main.e26d1de1.chunk.css",
-    "static/js/main.de11c3fb.chunk.js"
+    "static/css/2.0c8fc136.chunk.css",
+    "static/js/2.2e227837.chunk.js",
+    "static/css/main.e6ad7414.chunk.css",
+    "static/js/main.64b54517.chunk.js"
   ]
 }

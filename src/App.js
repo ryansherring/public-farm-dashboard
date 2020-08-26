@@ -8,6 +8,8 @@ import ToDoList from "./Components/ToDo/ToDoList";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sidebar from "./Components/Sidebar/Sidebar";
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 const App = () => {
 
@@ -20,7 +22,6 @@ const App = () => {
     setScrollHeight(document.documentElement.scrollHeight)
     setClientHeight(window.innerHeight)
   }
-  
   useEffect(function(){
     window.addEventListener('resize', handleResize())
     return () => {
@@ -28,11 +29,16 @@ const App = () => {
     }
  }, []);
 
+  useEffect(() => {
+    Aos.init({})
+    }, []);
+    // AOS animation docs: https://michalsnik.github.io/aos/
+    // AOS animation video howto example: https://www.youtube.com/watch?v=JcHLxzrsRS4
   return (
       <>
       {sh > ch ? (
         <Container fluid style={{ height: `${sh}`, position: "absolute", zIndex: "1" }} className="app-container" >
-        <Row>
+        <Row >
           <Climate />
         </Row>
         <Sidebar />
@@ -40,13 +46,13 @@ const App = () => {
       ) : (
         <>
         <Container fluid style={{ height: '100vh', position: "absolute", zIndex: "1" }} className="app-container" >
-        <Row>
-          <Climate />
+        <Row data-aos="fade-right">
+          <Climate/>
         </Row>
-          <Row style={{ width: "80%", marginLeft: "10%" }}>
-            <ToDoList />
+          <Row style={{ width: "80%", marginLeft: "10%" }} data-aos="fade-left">
+            <ToDoList data-aos="fade-right"/>
           </Row>
-          <Row style={{ height: "8%", width: "54%", marginLeft: "23%", marginTop: '2%', backgroundColor: "rgba(255, 255, 255, 0.6)"}}>
+          <Row style={{ height: "5%", width: "54%", marginLeft: "23%", backgroundColor: "rgba(255, 255, 255, 0.6)"}} data-aos="fade-up">
             <Col>
               <Fan />
             </Col>

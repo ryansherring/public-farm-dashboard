@@ -235,6 +235,8 @@ class Climate extends React.Component {
       }
     };
   }
+
+  
   // MAX_TEMP_READINGS = 4610
   //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -248,8 +250,8 @@ class Climate extends React.Component {
               options={this.state.lineChartOptions}
             />
           </Row>
-          <CardGroup style={{marginTop: "2%"}}>
-            <Card style = {{ fontSize: "calc(50% + 2vmin)", backgroundColor: 'rgba(255,255,255, 0.4)'}}>
+          <CardGroup style={{marginTop: "1%"}}>
+            <Card style = {{ fontSize: "calc(50% + 2vmin)", backgroundColor: 'rgba(255,255,255, 0.4)'}} data-aos="fade-up" >
               <Card.Title>Current Indoor Temperature</Card.Title>
               <Card.Body style={{ padding: "0", textAlign: "center", }}>
               <ReactSpeedometer
@@ -267,7 +269,7 @@ class Climate extends React.Component {
               />
               </Card.Body>
             </Card>
-            <Card style = {{ fontSize: "calc(50% + 2vmin)", backgroundColor: 'rgba(255,255,255, 0.4)'}}>
+            <Card style = {{ fontSize: "calc(50% + 2vmin)", backgroundColor: 'rgba(255,255,255, 0.4)'}} data-aos="fade-up">
               <Card.Title>Current Indoor Humidity</Card.Title>
               <Card.Body style={{ padding: "0", textAlign: "center"}}>
               <ReactSpeedometer
@@ -285,7 +287,7 @@ class Climate extends React.Component {
               />
               </Card.Body>
             </Card>
-            <Card style = {{ fontSize: "calc(50% + 2vmin)", backgroundColor: 'rgba(255,255,255, 0.4)' }}>
+            <Card style = {{ fontSize: "calc(50% + 2vmin)", backgroundColor: 'rgba(255,255,255, 0.4)' }} data-aos="fade-up">
               Cloud Cover: {this.state.cloudCover}%
               <Pie 
               // height={100}
@@ -295,7 +297,7 @@ class Climate extends React.Component {
               style ={{ backgroundColor: 'rgba(255,255,255, 0.4)'}}
               />
             </Card>
-            <Card className={"box4"} style = {{  fontSize: "calc(50% + 1vmin)", backgroundColor: 'rgba(255,255,255, 0.4)' }}>
+            <Card className={"box4"} style = {{  fontSize: "calc(50% + 1vmin)", backgroundColor: 'rgba(255,255,255, 0.4)' }} data-aos="fade-up">
              <br />weather images being changed at the moment
              <br />wind speed: {this.state.windSpeed} mph
              <br />weather: {this.state.weather}

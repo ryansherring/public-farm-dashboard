@@ -55,7 +55,7 @@ const ToDoList = () => {
         </>
       ) : (
         <>
-          <Card className="todo" style={{ width: "70%", marginLeft: "15%", backgroundColor: "rgba(255, 255, 255, 0.6)" }}>
+          <Card className="todo" style={{ width: "70%", marginLeft: "15%", backgroundColor: "rgba(255, 255, 255, 0.6)" }} data-aos="fade-up">
             <Card.Title>Farm To-Do-List</Card.Title>
             <Card.Body style={{ padding: "0" }}>
               <p>

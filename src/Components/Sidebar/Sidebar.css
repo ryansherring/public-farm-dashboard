@@ -10,7 +10,7 @@
 
 #nav{
     /* position: "fixed"; */
-          z-index: 10;
+          /* z-index: 10; */
           /* width: 45%; */
 }
 
@@ -19,13 +19,13 @@
     z-index: 10;
 }
 
-.bottom {
-    /* position: absolute; */
+/* .bottom {
+    position: relative;
     z-index: 1;
     margin-bottom: 40vh;
     width: 80vw;
     margin-left: 10vw;
-}
+} */
 .hide {
     display: none;
 }

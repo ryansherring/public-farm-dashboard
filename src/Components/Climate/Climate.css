@@ -4,10 +4,6 @@
     text-align: center;
     
 }
-.box4 {
-    text-align: center;
-    /* text-decoration: line-through; */
-}
 p{
     font-size: calc(20% + 1vmin);
 }

@@ -297,11 +297,12 @@ class Climate extends React.Component {
               style ={{ backgroundColor: 'rgba(255,255,255, 0.4)'}}
               />
             </Card>
-            <Card className={"box4"} style = {{  fontSize: "calc(50% + 1vmin)", backgroundColor: 'rgba(255,255,255, 0.4)' }} data-aos="fade-up">
+            <Card className={"box4"} style = {{ position: 'relative', fontSize: "calc(50% + 1vmin)", backgroundColor: 'rgba(255,255,255, 0.4)', zIndex: "12" }} data-aos="fade-up" >
              <br />weather images being changed at the moment
              <br />wind speed: {this.state.windSpeed} mph
              <br />weather: {this.state.weather}
             </Card>
+            {/* <ToDoList style={{display: "hidden"}}/> */}
           </CardGroup>
       </Container>
     );

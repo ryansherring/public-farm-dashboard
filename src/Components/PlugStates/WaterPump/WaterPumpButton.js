@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Container } from 'react-bootstrap'
 
 class WaterPump extends Component {
-    state = { WaterPump: "off", buttonColor: "led-red" };
+    state = { WaterPump: "on", buttonColor: "led-green" };
     // componentDidMount() {
     //   const WaterPumpSubscription = {
     //     "messageType": "propertyStatus",

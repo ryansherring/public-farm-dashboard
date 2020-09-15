@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4f288449799c5c7d0ac48bc92f748f5c",
+    "revision": "903e572e898f2f8baa995f2c0a76aa13",
     "url": "/public-farm-dashboard/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/public-farm-dashboard/static/css/2.0c8fc136.chunk.css"
   },
   {
-    "revision": "1d382963fe389e187e62",
-    "url": "/public-farm-dashboard/static/css/main.9848d8f1.chunk.css"
+    "revision": "fda13c17d2aade7d0da6",
+    "url": "/public-farm-dashboard/static/css/main.db4d4089.chunk.css"
   },
   {
     "revision": "ee953f8deff585659df0",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/public-farm-dashboard/static/js/2.2e227837.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1d382963fe389e187e62",
-    "url": "/public-farm-dashboard/static/js/main.a0e7012a.chunk.js"
+    "revision": "fda13c17d2aade7d0da6",
+    "url": "/public-farm-dashboard/static/js/main.13ebc80e.chunk.js"
   },
   {
     "revision": "9b56150d5b10408cb56b",

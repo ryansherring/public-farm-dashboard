@@ -122,8 +122,83 @@ class Climate extends React.Component {
     };
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+    // let logObj
+    // let outsideLogObj
+    // fetch(
+    //   "https://sherringiscaring.mozilla-iot.org/logs/things/http---192.168.1.100-things-DHTSensor/properties/temperature",
+    //   {
+    //     method: "GET",
+    //     headers: {
+    //       Accept: "application/json",
+    //       authorization:
+    //         "Bearer eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjhjOWVhNjA3LWE1ZWQtNDEyZS1iYmUxLWU2Yjk4OTk3NzM3NyJ9.eyJyb2xlIjoidXNlcl90b2tlbiIsImlhdCI6MTU4OTc0ODIxNywiaXNzIjoiaHR0cHM6Ly9zaGVycmluZ2lzY2FyaW5nLm1vemlsbGEtaW90Lm9yZyJ9.BvpmWFRxZsgQ25BAUcWjqyXE-ZmXOllgZN6xUJ9THewr6ckyo-MEhjgicPfknK8_KoJ1wolSrMIH6Wz1IaC8Xg",
+    //     },
+    //   }
+    // )
+    // .then((res) => res.json())
+    // .then((res) => logObj = res)
+    // .then((logObj) => {
+    //   console.log(logObj);
+    //   logObj.forEach(Object => {
+    //     this.state.lineChartData.datasets[0].data.push(Object.value)
+    //     // this.state.lineChartData.datasets[0].data.shift()
+    //     this.state.lineChartData.labels.push(new Date(Object.date).toLocaleTimeString([], { weekday: "short", hour: '2-digit', minute: '2-digit' }))
+    //     // this.state.lineChartData.labels.shift()
+    //   })
+    // })
+    
+
+    
+    // fetch(
+    //   "https://sherringiscaring.mozilla-iot.org/logs/things/weather-7122537431f4dc3d166c957717ee2b498815d683/properties/temperature",
+    //   {
+    //     method: "GET",
+    //     headers: {
+    //       Accept: "application/json",
+    //       authorization:
+    //         "Bearer eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjhjOWVhNjA3LWE1ZWQtNDEyZS1iYmUxLWU2Yjk4OTk3NzM3NyJ9.eyJyb2xlIjoidXNlcl90b2tlbiIsImlhdCI6MTU4OTc0ODIxNywiaXNzIjoiaHR0cHM6Ly9zaGVycmluZ2lzY2FyaW5nLm1vemlsbGEtaW90Lm9yZyJ9.BvpmWFRxZsgQ25BAUcWjqyXE-ZmXOllgZN6xUJ9THewr6ckyo-MEhjgicPfknK8_KoJ1wolSrMIH6Wz1IaC8Xg",
+    //     },
+    //   }
+    // )
+    // .then((res) => res.json())
+    // .then((res) => {
+    //   outsideLogObj = res;
+    //   console.log(outsideLogObj)
+    //   outsideLogObj.forEach(Object => {
+    //     this.state.lineChartData.datasets[1].data.push(Object.value)
+    //     // this.state.lineChartData.datasets[1].data.shift()
+    //     this.state.lineChartData.labels.push(new Date(Object.date).toLocaleTimeString([], { weekday: "short", hour: '2-digit', minute: '2-digit' }))
+    //     // this.state.lineChartData.labels.shift()
+    //     // console.log(this.state.lineChartData.datasets[1].data)
+    //   })
+    // })
+
+
+
+
+      // const oldTempDataSet = this.state.lineChartData.datasets[0];
+      // const newTempDataSet = { ...oldTempDataSet };
+      // const oldTemp2DataSet = this.state.lineChartData.datasets[1];
+      // const newTemp2DataSet = { ...oldTemp2DataSet };
+
+      // const newChart1Data = {
+      //   ...this.state.lineChartData.datasets,
+      //   datasets: [newTempDataSet, newTemp2DataSet],
+      //   ...this.state.lineChartData.datasets[1],
+      //   datasets: [newTempDataSet, newTemp2DataSet],
+
+      //   labels: this.state.lineChartData.labels.concat(
+      //     new Date().toLocaleTimeString([], { weekday: "short", hour: '2-digit', minute: '2-digit' })
+      //   ),
+      // };
+      // console.log(newChart1Data)
+      // this.setState({ lineChartData: newChart1Data })
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
     this.ws = new WebSocket(
-      "wss://sherringiscaring.mozilla-iot.org/things/http---192.168.1.100-things-DHTSensor?jwt=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjRhMTJiNWY5LWVlNTAtNGFkMi1hNzNlLTg5ODVjODRhNTU3ZiJ9.eyJyb2xlIjoidXNlcl90b2tlbiIsImlhdCI6MTU5MTczNDAzMCwiaXNzIjoiaHR0cHM6Ly9zaGVycmluZ2lzY2FyaW5nLm1vemlsbGEtaW90Lm9yZyJ9.UGVluprHnYwU1IW8HGHi5KzIdAy0tPm6BwIaCFJmcuWfP2bO7LUpYmuDZzLTKaepW8ZO5N80EiIzzTfeqB7Xsg",
+      "wss://sherringiscaring.mozilla-iot.org/things/http---192.168.1.78-things-DHTSensor?jwt=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjRhMTJiNWY5LWVlNTAtNGFkMi1hNzNlLTg5ODVjODRhNTU3ZiJ9.eyJyb2xlIjoidXNlcl90b2tlbiIsImlhdCI6MTU5MTczNDAzMCwiaXNzIjoiaHR0cHM6Ly9zaGVycmluZ2lzY2FyaW5nLm1vemlsbGEtaW90Lm9yZyJ9.UGVluprHnYwU1IW8HGHi5KzIdAy0tPm6BwIaCFJmcuWfP2bO7LUpYmuDZzLTKaepW8ZO5N80EiIzzTfeqB7Xsg",
       "webthing"
     );
 
@@ -131,6 +206,9 @@ class Climate extends React.Component {
     this.ws.onopen = () => {
       console.log("Connection Opened! (Inside Temp)");
       this.ws.send(JSON.stringify(indoorSubscription));
+      
+
+      // get a single point of data to correspond with first onMessage. NOTE: May not be needed after logs
       let obj;
       fetch(
         "https://sherringiscaring.mozilla-iot.org/things/weather-7122537431f4dc3d166c957717ee2b498815d683/properties",
@@ -195,6 +273,7 @@ class Climate extends React.Component {
           })
           .catch((err) => console.log(err));
 
+
         const oldTemp2DataSet = this.state.lineChartData.datasets[1];
         const PieDataSet1 = this.state.pieData.datasets[0];
 
@@ -216,7 +295,7 @@ class Climate extends React.Component {
           datasets: [newTempDataSet, newTemp2DataSet],
 
           labels: this.state.lineChartData.labels.concat(
-            new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+            new Date().toLocaleTimeString([], { weekday: "short", hour: '2-digit', minute: '2-digit' })
           ),
         };
         const newPieChartData = {

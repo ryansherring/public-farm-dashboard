@@ -17,10 +17,7 @@ const App = () => {
   var sh = document.documentElement.scrollHeight
   const [scrollHeight, setScrollHeight] = useState(sh)
   const [clientHeight, setClientHeight] = useState(ch)
-
-  console.log(ch)
-  console.log(sh)
-
+  
   const handleResize = () => {
     setScrollHeight(document.documentElement.scrollHeight)
     setClientHeight(window.innerHeight)

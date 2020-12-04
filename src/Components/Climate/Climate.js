@@ -126,7 +126,7 @@ class Climate extends React.Component {
     // let logObj
     // let outsideLogObj
     // fetch(
-    //   "https://sherringiscaring.mozilla-iot.org/logs/things/http---192.168.1.100-things-DHTSensor/properties/temperature",
+    //   "https://sherringiscaring.webthings.io/logs/things/http---192.168.1.100-things-DHTSensor/properties/temperature",
     //   {
     //     method: "GET",
     //     headers: {
@@ -151,7 +151,7 @@ class Climate extends React.Component {
 
     
     // fetch(
-    //   "https://sherringiscaring.mozilla-iot.org/logs/things/weather-7122537431f4dc3d166c957717ee2b498815d683/properties/temperature",
+    //   "https://sherringiscaring.webthings.io/logs/things/weather-7122537431f4dc3d166c957717ee2b498815d683/properties/temperature",
     //   {
     //     method: "GET",
     //     headers: {
@@ -198,7 +198,7 @@ class Climate extends React.Component {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     this.ws = new WebSocket(
-      "wss://sherringiscaring.mozilla-iot.org/things/http---192.168.1.78-things-DHTSensor?jwt=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjRhMTJiNWY5LWVlNTAtNGFkMi1hNzNlLTg5ODVjODRhNTU3ZiJ9.eyJyb2xlIjoidXNlcl90b2tlbiIsImlhdCI6MTU5MTczNDAzMCwiaXNzIjoiaHR0cHM6Ly9zaGVycmluZ2lzY2FyaW5nLm1vemlsbGEtaW90Lm9yZyJ9.UGVluprHnYwU1IW8HGHi5KzIdAy0tPm6BwIaCFJmcuWfP2bO7LUpYmuDZzLTKaepW8ZO5N80EiIzzTfeqB7Xsg",
+      "wss://sherringiscaring.webthings.io/things/http---192.168.1.74-things-DHTSensor?jwt=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjRhMTJiNWY5LWVlNTAtNGFkMi1hNzNlLTg5ODVjODRhNTU3ZiJ9.eyJyb2xlIjoidXNlcl90b2tlbiIsImlhdCI6MTU5MTczNDAzMCwiaXNzIjoiaHR0cHM6Ly9zaGVycmluZ2lzY2FyaW5nLm1vemlsbGEtaW90Lm9yZyJ9.UGVluprHnYwU1IW8HGHi5KzIdAy0tPm6BwIaCFJmcuWfP2bO7LUpYmuDZzLTKaepW8ZO5N80EiIzzTfeqB7Xsg",
       "webthing"
     );
 
@@ -211,7 +211,7 @@ class Climate extends React.Component {
       // get a single point of data to correspond with first onMessage. NOTE: May not be needed after logs
       let obj;
       fetch(
-        "https://sherringiscaring.mozilla-iot.org/things/weather-7122537431f4dc3d166c957717ee2b498815d683/properties",
+        "https://sherringiscaring.webthings.io/things/weather-7122537431f4dc3d166c957717ee2b498815d683/properties",
         {
           method: "GET",
           headers: {
@@ -250,7 +250,7 @@ class Climate extends React.Component {
         // console.log(value.data);
         var obj;
         fetch(
-          "https://sherringiscaring.mozilla-iot.org/things/weather-7122537431f4dc3d166c957717ee2b498815d683/properties",
+          "https://sherringiscaring.webthings.io/things/weather-7122537431f4dc3d166c957717ee2b498815d683/properties",
           {
             method: "GET",
             headers: {
